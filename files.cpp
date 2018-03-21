@@ -104,7 +104,7 @@ int check_file(char *file_name) {
 
 	char *check_extension = NULL;
 	check_extension = strstr(file_name, GAMES_EXTENSION);
-	if (check_extension != NULL && *(check_extension+1) == '\0') {
+	if (check_extension != NULL && *(check_extension+strlen(GAMES_EXTENSION)) == '\0') {
 
 		char dir[8] = GAMES_DIR;
 		char *board_dir = new char[strlen(file_name) + strlen(dir) + 1](); // strlen nie liczy \0
